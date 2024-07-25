@@ -14,7 +14,7 @@ public class LoginServlet extends HttpServlet {
     private LoginService loginService = new LoginService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("login.jsp").forward(req, resp);
+        req.getRequestDispatcher("html/backend/auth-sign-in.jsp").forward(req, resp);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
         boolean isLogin = loginService.checkLogin(username, password);
 
         System.out.println(isLogin);
-        request.getRequestDispatcher("login.jsp").forward(request, response);
+        request.getRequestDispatcher("html/backend/auth-sign-in.jsp").forward(request, response);
 
 
     }
