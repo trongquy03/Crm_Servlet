@@ -9,10 +9,10 @@
       <title>Datum | CRM Admin Dashboard Template</title>
       
       <!-- Favicon -->
-      <link rel="shortcut icon" href="../assets/images/favicon.ico" />
+      <link rel="shortcut icon" href="assets/images/favicon.ico" />
       
-      <link rel="stylesheet" href="../assets/css/backend-plugin.min.css">
-      <link rel="stylesheet" href="../assets/css/backend.css">  </head>
+      <link rel="stylesheet" href="assets/css/backend-plugin.min.css">
+      <link rel="stylesheet" href="assets/css/backend.css?v=1.0.0">  </head>
   <body class=" ">
     <!-- loader Start -->
     <div id="loading">
@@ -33,12 +33,12 @@
                         </div>
                         <h2 class="mb-2 text-center">Sign In</h2>
                         <p class="text-center">To Keep connected with us please login with your personal info.</p>
-                        <form  action="http://localhost:8081/Servlet_crm_war_exploded/login" method="post">
+                        <form>
                            <div class="row">
                               <div class="col-lg-12">
                                  <div class="form-group">
                                     <label>Email</label>
-                                    <input class="form-control" type="text" placeholder="admin@example.com">
+                                    <input class="form-control" type="email" placeholder="admin@example.com">
                                  </div>
                               </div>
                               <div class="col-lg-12">
@@ -71,37 +71,37 @@
       </div>
     
     <!-- Backend Bundle JavaScript -->
-    <script src="../assets/js/backend-bundle.min.js"></script>
+    <script src="assets/js/backend-bundle.min.js"></script>
     <!-- Chart Custom JavaScript -->
-    <script src="../assets/js/customizer.js"></script>
+    <script src="assets/js/customizer.js"></script>
     
-    <script src="../assets/js/sidebar.js"></script>
+    <script src="assets/js/sidebar.js"></script>
     
     <!-- Flextree Javascript-->
-    <script src="../assets/js/flex-tree.min.js"></script>
-    <script src="../assets/js/tree.js"></script>
+    <script src="assets/js/flex-tree.min.js"></script>
+    <script src="assets/js/tree.js"></script>
     
     <!-- Table Treeview JavaScript -->
-    <script src="../assets/js/table-treeview.js"></script>
+    <script src="assets/js/table-treeview.js"></script>
     
     <!-- SweetAlert JavaScript -->
-    <script src="../assets/js/sweetalert.js"></script>
+    <script src="assets/js/sweetalert.js"></script>
     
     <!-- Vectoe Map JavaScript -->
-    <script src="../assets/js/vector-map-custom.js"></script>
+    <script src="assets/js/vector-map-custom.js"></script>
     
     <!-- Chart Custom JavaScript -->
-    <script src="../assets/js/chart-custom.js"></script>
-    <script src="../assets/js/charts/01.js"></script>
-    <script src="../assets/js/charts/02.js"></script>
+    <script src="assets/js/chart-custom.js"></script>
+    <script src="assets/js/charts/01.js"></script>
+    <script src="assets/js/charts/02.js"></script>
     
     <!-- slider JavaScript -->
-    <script src="../assets/js/slider.js"></script>
+    <script src="assets/js/slider.js"></script>
     
     <!-- Emoji picker -->
-    <script src="../assets/vendor/emoji-picker-element/index.js" type="module"></script>
+    <script src="assets/vendor/emoji-picker-element/index.js" type="module"></script>
     
     
     <!-- app JavaScript -->
-    <script src="../assets/js/app.js"></script>  </body>
+    <script src="assets/js/app.js"></script>  </body>
 </html>
