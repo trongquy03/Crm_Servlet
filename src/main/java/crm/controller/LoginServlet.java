@@ -1,5 +1,7 @@
 package crm.controller;
 
+import crm.service.LoginService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +11,7 @@ import java.io.IOException;
 
 @WebServlet(name = "loginServlet", urlPatterns = {"/login"})
 public class LoginServlet extends HttpServlet {
+    private LoginService loginService = new LoginService();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("login.jsp").forward(req, resp);
@@ -18,11 +21,11 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        if (username.equals("admin") && password.equals("123456")) {
-            request.getRequestDispatcher("index.jsp").forward(request, response);
-        }else {
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+        boolean isLogin = loginService.checkLogin(username, password);
 
-        }
+        System.out.println(isLogin);
+        request.getRequestDispatcher("login.jsp").forward(request, response);
+
+
     }
 }

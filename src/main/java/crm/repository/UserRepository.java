@@ -14,7 +14,7 @@ public class UserRepository {
     public List<User> getUserByUserNameAndPassword(String username, String password){
         List<User> list = new ArrayList<>();
         Connection con = MysqlConnection.getConnection();
-        String query = "select * from users u where u.username = ? and u.password = ?";
+        String query = "select * from users where username = ? and password = ?";
         try {
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, username);
@@ -34,7 +34,9 @@ public class UserRepository {
             throw new RuntimeException(e);
         }finally {
             try {
-                con.close();
+                if (con != null) {
+                    con.close();
+                }
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
