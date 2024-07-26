@@ -10,4 +10,7 @@ public class RoleService {
     public List<Role> getRoles() {
         return roleRepository.getRoles();
     }
+    public boolean deleteRoleById(int id) {
+        return roleRepository.deleteRoleById(id) > 0 ? true : false;
+    }
 }

@@ -38,5 +38,26 @@ public class RoleRepository {
         }
         return list;
     }
+    public int deleteRoleById(int id){
+        Connection con = MysqlConnection.getConnection();
+        String query = "delete from roles where id=?";
+        int isDeleted = 0;
+        try {
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setInt(1, id);
+            isDeleted = ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            try {
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return isDeleted;
+    }
 
 }
